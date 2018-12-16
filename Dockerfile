@@ -6,8 +6,11 @@ LABEL Description="Debian stretch from Mathieu GERAULT"
 # Suppress interactive mode
 ENV DEBIAN_FRONTEND noninteractive
 
-# Update system
-RUN apt-get update && apt-get install -y apt-utils && apt-get -y -q upgrade && apt-get -y -q dist-upgrade
+# Update system and install apt-utils
+RUN apt-get update \
+	&& apt-get install -y apt-utils \
+	&& apt-get -y -q upgrade \
+	&& apt-get -y -q dist-upgrade
 
 # Principal tools
 # libltdl7 -> needed to make the "docker" command work in the docker container
