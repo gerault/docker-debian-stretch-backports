@@ -18,6 +18,8 @@ RUN apt-get install -y procps \
 	&& apt-get install -y vim \
 	&& apt-get install -y less \
 	&& apt-get install -y curl \
+	&& apt-get install -y wget \
+	&& apt-get install -y python \
 	&& apt-get install -y libltdl7
 
 # Locales
